@@ -2,11 +2,11 @@ import React from "react";
 import DateSelector from "./DateSelector";
 import ImageCycle from "./ImageCycle";
 
-function Navigation() {
+function Navigation({ handleDateChange }) {
   const availableDatesArray = [
-    "2015-06-13",
+    "2020-11-06",
     "2015-06-16",
-    "2015-06-17",
+    "2020-10-10",
     "2015-06-18",
     "2015-06-20",
     "2015-06-21",
@@ -15,7 +15,10 @@ function Navigation() {
     <div>
       <div>Number of available dates is: </div>
       <div>Please select a date:</div>
-      <DateSelector availableDatesArray={availableDatesArray} />
+      <DateSelector
+        availableDatesArray={availableDatesArray}
+        handleDateChange={handleDateChange}
+      />
       <ImageCycle />
     </div>
   );

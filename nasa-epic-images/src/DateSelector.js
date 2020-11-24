@@ -1,12 +1,10 @@
 import React from "react";
 
-function DateSelector({ availableDatesArray }) {
-  // Handle date change
-  const handleOnchange = () => {
-    // Get new date json file
-    // Show images for new date
+function DateSelector({ availableDatesArray, handleDateChange }) {
+  const handleOnchange = (e) => {
+    // Argument is a date in string format
+    handleDateChange(e.target.value);
   };
-
   return (
     <div>
       <select name="" id="" onChange={handleOnchange}>
