@@ -2,14 +2,10 @@
 
 import React from "react";
 
-function ImageContainer({ imageUrlArray }) {
+function ImageContainer({ imageUrl }) {
   return (
     <div>
-      {imageUrlArray.map((imageUrl) => {
-        return (
-          <img key={imageUrlArray.indexOf(imageUrl)} src={imageUrl} alt="" />
-        );
-      })}
+      <img src={imageUrl} alt="" className="mainImage" />
     </div>
   );
 }
