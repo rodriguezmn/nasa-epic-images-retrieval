@@ -1,5 +1,13 @@
+import ImageContainer from "./ImageContainer";
+import Navigation from "./Navigation";
+
 function App() {
-  return <h1>Hello World!</h1>;
+  return (
+    <div>
+      <Navigation />
+      <ImageContainer />
+    </div>
+  );
 }
 
 export default App;
