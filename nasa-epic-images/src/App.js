@@ -5,19 +5,14 @@ import { useState, useEffect } from "react";
 const partialImageUrl = "https://epic.gsfc.nasa.gov/archive/natural/";
 const partialDateDataUlr = "https://epic.gsfc.nasa.gov/api/natural/date/";
 const availableDatesUrl = "https://epic.gsfc.nasa.gov/api/natural/available";
-// epic_1b_20201106021515;
-// oct 10:
-// epic_1b_20201106002712;
 function App() {
-  // const imageUrl = [
-  //   "https://epic.gsfc.nasa.gov/archive/natural/2020/11/06/png/epic_1b_20201106002712.png",
-  // ];
   const [availableDates, setAvailableDates] = useState([]);
   const [dateData, setDateData] = useState([]);
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(true);
 
   // Hooks
+
   // Fetch available dates when loading page
   useEffect(() => {
     fetchAvailableDates();
@@ -38,6 +33,8 @@ function App() {
       setImageUrl(url);
     }
   }, [dateData]);
+
+  // Methods
 
   // Make image url
   const makeImageUrl = (dateData) => {
@@ -73,12 +70,14 @@ function App() {
     return url;
   };
 
+  // Handle select element on change event
   const handleDateChange = (date) => {
     // Fetch date data
     const url = makeDateDataUrl(date);
     fetchDateData(url);
   };
 
+  // Conditional return
   if (loading) {
     return <h1>Loading</h1>;
   }
