@@ -1,7 +1,59 @@
 body {
   background-color: black;
+  /* color: #c08b1d; */
+  color: #f2b54a;
 }
 .mainImage {
-  max-width: 50%;
+  max-width: 70%;
   max-height: auto;
+}
+
+.header {
+  /* font-family: "IBM Plex Sans", sans-serif; */
+  font-family: "Goldman", cursive;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.childImageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation {
+  /* background-color: #222831; */
+  /* background-color: ; */
+  /* opacity: 0.3; */
+  border-width: 10px;
+  border-radius: 10px;
+  border-width: 4px;
+  border-color: honeydew;
+
+  /* border: #e79e4f; */
+}
+
+/* iPads (portrait and landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .mainImage {
+    max-width: 80%;
+    max-height: auto;
+  }
+}
+/* Cellphones (portrait and landscape) */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .mainImage {
+    max-width: 90%;
+    max-height: auto;
+  }
 }

@@ -4,8 +4,10 @@ import React from "react";
 
 function ImageContainer({ imageUrl }) {
   return (
-    <div>
-      <img src={imageUrl} alt="" className="mainImage" />
+    <div className="imageContainer">
+      <div className="childImageContainer">
+        <img src={imageUrl} alt="" className="mainImage" />
+      </div>
     </div>
   );
 }

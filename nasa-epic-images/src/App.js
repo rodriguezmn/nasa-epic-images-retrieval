@@ -83,7 +83,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="container">
       <Navigation
         handleDateChange={handleDateChange}
         availableDatesArray={availableDates}
