@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 const partialImageUrl = "https://epic.gsfc.nasa.gov/archive/natural/";
 const partialDateDataUlr = "https://epic.gsfc.nasa.gov/api/natural/date/";
+const availableDatesUrl = "https://epic.gsfc.nasa.gov/api/natural/available";
 // epic_1b_20201106021515;
 // oct 10:
 // epic_1b_20201106002712;
@@ -11,12 +12,22 @@ function App() {
   // const imageUrl = [
   //   "https://epic.gsfc.nasa.gov/archive/natural/2020/11/06/png/epic_1b_20201106002712.png",
   // ];
+  const [availableDates, setAvailableDates] = useState([]);
   const [dateData, setDateData] = useState([]);
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(true);
 
   // Hooks
-
+  // Load most recent date data on first load
+  useEffect(() => {
+    // Fetch available dates
+    const dates = async () => {
+      const response = await fetch(availableDatesUrl);
+      const dates = await response.json();
+      console.log("available dates", dates);
+    };
+    setAvailableDates(dates);
+  }, []);
   // When dateData changes, make image url and set image url
   useEffect(() => {
     if (dateData.length) {
