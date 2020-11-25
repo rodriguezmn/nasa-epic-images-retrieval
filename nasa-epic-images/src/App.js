@@ -21,16 +21,20 @@ function App() {
   // Load most recent date data on first load
   useEffect(() => {
     // Fetch available dates
-    const dates = async () => {
-      const response = await fetch(availableDatesUrl);
-      const dates = await response.json();
-      console.log("available dates", dates);
-    };
-    setAvailableDates(dates);
+    fetchAvailableDates();
   }, []);
+  // When avaialable dates change get date data for most recent date
+  useEffect(() => {
+    if (availableDates.length) {
+      console.log("available dates change");
+      const url = makeDateDataUrl(availableDates[availableDates.length - 1]);
+      fetchDateData(url);
+    }
+  }, [availableDates]);
   // When dateData changes, make image url and set image url
   useEffect(() => {
     if (dateData.length) {
+      console.log("date data", dateData);
       const url = makeImageUrl(dateData);
       setImageUrl(url);
     }
@@ -38,19 +42,30 @@ function App() {
 
   // Make image url
   const makeImageUrl = (dateData) => {
-    const year = dateData[0]["indentifier"].substring(0, 4);
-    const month = dateData[0]["indentifier"].substring(4, 6);
-    const day = dateData[0]["indentifier"].substring(6, 8);
+    // console.log(typeof dateData[0]["identifier"]);
+    // console.log(dateData[0]["identifier"].substring(0, 4));
+    const year = dateData[0]["identifier"].substring(0, 4);
+    const month = dateData[0]["identifier"].substring(4, 6);
+    const day = dateData[0]["identifier"].substring(6, 8);
     const imageId = dateData[0]["image"];
     const url = partialImageUrl + `${year}/${month}/${day}/png/${imageId}.png`;
     return url;
+  };
+
+  // Fetch available dates
+  const fetchAvailableDates = async () => {
+    const response = await fetch(availableDatesUrl);
+    const dates = await response.json();
+    console.log("available dates", dates);
+    setAvailableDates(dates);
   };
 
   // Fetch date data
   const fetchDateData = async (url) => {
     const response = await fetch(url);
     const data = await response.json();
-    return data;
+    setLoading(false);
+    setDateData(data);
   };
 
   // Make date data url
