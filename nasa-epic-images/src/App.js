@@ -73,23 +73,10 @@ function App() {
     return url;
   };
 
-  // Get date data
-  const getDateData = (date) => {
-    // Make date date url
-    const url = makeDateDataUrl(date);
-    // Fetch Data
-    const data = fetchDateData(url);
-    // Set date data
-  };
-
   const handleDateChange = (date) => {
     // Fetch date data
     const url = makeDateDataUrl(date);
-    const dateData = fetchDateData(url);
-    // Set date data
-
-    // Using date data, make image url
-    // Set image url
+    fetchDateData(url);
   };
 
   if (loading) {
