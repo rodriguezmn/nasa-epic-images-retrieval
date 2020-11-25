@@ -7,7 +7,12 @@ function DateSelector({ availableDatesArray, handleDateChange }) {
   };
   return (
     <div>
-      <select name="" id="" onChange={handleOnchange}>
+      <select
+        value={availableDatesArray[availableDatesArray.length - 1]}
+        name=""
+        id=""
+        onChange={handleOnchange}
+      >
         {availableDatesArray.map((date) => {
           return (
             <option key={availableDatesArray.indexOf(date)} value={date}>
