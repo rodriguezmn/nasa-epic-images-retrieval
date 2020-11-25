@@ -18,12 +18,11 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   // Hooks
-  // Load most recent date data on first load
+  // Fetch available dates when loading page
   useEffect(() => {
-    // Fetch available dates
     fetchAvailableDates();
   }, []);
-  // When avaialable dates change get date data for most recent date
+  // When avaialable dates changes, make date data url and get date data for most recent date
   useEffect(() => {
     if (availableDates.length) {
       console.log("available dates change");
