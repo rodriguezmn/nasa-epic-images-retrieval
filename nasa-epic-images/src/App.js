@@ -47,7 +47,7 @@ function App() {
     const month = dateData[0]["identifier"].substring(4, 6);
     const day = dateData[0]["identifier"].substring(6, 8);
     const imageId = dateData[0]["image"];
-    const url = partialImageUrl + `${year}/${month}/${day}/png/${imageId}.png`;
+    const url = partialImageUrl + `${year}/${month}/${day}/jpg/${imageId}.jpg`;
     return url;
   };
 
