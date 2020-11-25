@@ -83,7 +83,10 @@ function App() {
   }
   return (
     <div>
-      <Navigation handleDateChange={handleDateChange} />
+      <Navigation
+        handleDateChange={handleDateChange}
+        availableDatesArray={availableDates}
+      />
       <ImageContainer imageUrl={imageUrl} />
     </div>
   );
