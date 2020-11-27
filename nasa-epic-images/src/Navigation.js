@@ -72,6 +72,7 @@ function Navigation({ availableDatesArray, handleDateChange, dateData }) {
         {/* <p style={{ marginTop: "25px" }}>
           {availableDatesArray.length} available days
         </p> */}
+
         <div style={{ marginTop: "25px" }}>Select one</div>
         <div>of the {availableDatesArray.length}</div>
         <div>available days</div>
@@ -80,6 +81,7 @@ function Navigation({ availableDatesArray, handleDateChange, dateData }) {
           handleDateChange={handleDateChange}
         />
         <ImageCycle />
+        <h4>Distances {"<------>"}</h4>
         <div>
           Satelite to Earth: {calculateDistance(dscovrCoord, earthCoord)} km
         </div>
