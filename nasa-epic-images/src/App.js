@@ -1,6 +1,7 @@
 import ImageContainer from "./ImageContainer";
 import Navigation from "./Navigation";
 import Info from "./Info";
+import Footer from "./Footer";
 import { useState, useEffect } from "react";
 
 const partialImageUrl = "https://epic.gsfc.nasa.gov/archive/natural/";
@@ -96,6 +97,7 @@ function App() {
       <div className="information">
         <Info />
       </div>
+      <Footer />
     </div>
   );
 }

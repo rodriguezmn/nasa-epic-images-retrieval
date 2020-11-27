@@ -10,6 +10,10 @@ function Info() {
         Imaging Camera (EPIC) instrument.
       </p>
       <p>
+        Select a day from the dropdown menu shown above to see a natural image
+        of the earth from the satellite's vantage point.
+      </p>
+      <p>
         <img
           src="https://www.nesdis.noaa.gov/sites/default/files/assets/images/point_of_lagrange1_big.jpg"
           alt="DSCOVR position in space. Credit: NOAA"
