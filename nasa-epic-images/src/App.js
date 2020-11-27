@@ -17,11 +17,11 @@ function App() {
   useEffect(() => {
     fetchAvailableDates();
   }, []);
-  // When avaialable dates changes, make date data url and get date data for most recent date
+  // When avaialable dates changes, make date data url and get date data for the first date
   useEffect(() => {
     if (availableDates.length) {
       console.log("available dates change");
-      const url = makeDateDataUrl(availableDates[availableDates.length - 1]);
+      const url = makeDateDataUrl(availableDates[0]);
       fetchDateData(url);
     }
   }, [availableDates]);
@@ -87,6 +87,7 @@ function App() {
       <Navigation
         handleDateChange={handleDateChange}
         availableDatesArray={availableDates}
+        dateData={dateData}
       />
       <ImageContainer imageUrl={imageUrl} />
     </div>
