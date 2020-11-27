@@ -59,7 +59,7 @@ function Navigation({ availableDatesArray, handleDateChange, dateData }) {
   return (
     <div className="navigation">
       <div className="nav-container">
-        <div className="header">
+        <div>
           <h2 style={{ marginBottom: "0.4rem" }}>
             Look again at that dot. <br /> That's here. <br />
             That's home. <br />
@@ -68,11 +68,6 @@ function Navigation({ availableDatesArray, handleDateChange, dateData }) {
 
           <h5 style={{ marginBottom: "5rem" }}>Carl Sagan</h5>
         </div>
-        <div className="content"></div>
-        {/* <p style={{ marginTop: "25px" }}>
-          {availableDatesArray.length} available days
-        </p> */}
-
         <div style={{ marginTop: "25px" }}>Select one</div>
         <div>of the {availableDatesArray.length}</div>
         <div>available days</div>

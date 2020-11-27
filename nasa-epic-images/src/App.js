@@ -85,7 +85,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="page-wrapper">
       <div className="container">
         <Navigation
           handleDateChange={handleDateChange}

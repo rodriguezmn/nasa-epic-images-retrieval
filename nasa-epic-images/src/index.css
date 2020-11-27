@@ -1,65 +1,36 @@
 body {
   background-color: black;
-  /* color: #c08b1d; */
-  /* color: #f2b54a; */
   color: #d29119;
-  /* font-family: "Goldman", cursive; */
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
 }
-.mainImage {
-  max-width: 80%;
-  max-height: auto;
-}
 
-.header {
-  /* margin-left: 5vw; */
-  /* margin: auto; */
-  /* font-weight: 700; */
-  /* margin-bottom: 2rem; */
-}
-.content {
-  /* margin-left: 5vw; */
-  /* margin: auto; */
-  /* font-weight: 700; */
-}
 .nav-container {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7rem;
 }
 
 .container {
   display: flex;
-  min-height: 100vh;
+  max-width: 1280px;
+  margin: auto;
 }
 
 .imageContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.childImageContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.mainImage {
+  max-width: 80%;
+  max-height: auto;
+  margin: auto;
 }
 
 .navigation {
-  /* background-color: #222831; */
-  /* background-color: ; */
-  /* opacity: 0.3; */
-  border-width: 10px;
-  border-radius: 10px;
-  border-width: 4px;
-  border-color: honeydew;
   display: flex;
   flex-direction: column;
-  /* margin-top: 5vw; */
-  margin-left: 10vw;
   min-width: 270px;
-
-  /* border: #e79e4f; */
 }
 
 .custom-select {
@@ -70,13 +41,18 @@ body {
 
 .information {
   display: flex;
-  margin: 10rem;
+  max-width: 1280px;
+  margin: auto;
 }
 .info-section {
   max-width: 700px;
   margin: auto;
   display: flex;
   flex-direction: column;
+}
+
+.page-wrapper {
+  margin: auto;
 }
 /* iPads (portrait and landscape) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
