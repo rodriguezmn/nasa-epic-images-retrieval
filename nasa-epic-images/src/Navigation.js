@@ -66,7 +66,7 @@ function Navigation({ availableDatesArray, handleDateChange, dateData }) {
             That's us.
           </h2>
 
-          <h5 style={{ marginBottom: "5rem" }}>Carl Sagan</h5>
+          <h5 className="quote-author">Carl Sagan</h5>
         </div>
         <div style={{ marginTop: "25px" }}>Select one</div>
         <div>of the {availableDatesArray.length}</div>
