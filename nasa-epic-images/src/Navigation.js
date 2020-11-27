@@ -43,39 +43,50 @@ function Navigation({ availableDatesArray, handleDateChange, dateData }) {
       return sum;
     };
 
+    const formatNumberWithCommas = (number) => {
+      return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+    };
+
     const sumSqrdDifferences = calculateSumSqrdDifferences();
 
     // Calculate distance
-    const distance = Math.sqrt(sumSqrdDifferences);
+    const distance = Math.round(Math.sqrt(sumSqrdDifferences));
+    const distanceFormatted = formatNumberWithCommas(distance);
 
-    return distance;
+    return distanceFormatted;
   };
 
   return (
     <div className="navigation">
-      <div className="header">
-        <h3 style={{ marginBottom: "0" }}>
-          Look again at that dot. <br /> That's here. <br />
-          That's home. <br />
-          That's us.
-        </h3>
-        <h5 style={{ margin: "0" }}>--Carl Sagan</h5>
+      <div className="nav-container">
+        <div className="header">
+          <h2 style={{ marginBottom: "0.4rem" }}>
+            Look again at that dot. <br /> That's here. <br />
+            That's home. <br />
+            That's us.
+          </h2>
+
+          <h5 style={{ marginBottom: "5rem" }}>--Carl Sagan</h5>
+        </div>
+        <div className="content"></div>
+        {/* <p style={{ marginTop: "25px" }}>
+          {availableDatesArray.length} available days
+        </p> */}
+        <div style={{ marginTop: "25px" }}>Select one</div>
+        <div>of the {availableDatesArray.length}</div>
+        <div>available days</div>
+        <DateSelector
+          availableDatesArray={availableDatesArray}
+          handleDateChange={handleDateChange}
+        />
+        <ImageCycle />
+        <div>
+          Satelite to Earth: {calculateDistance(dscovrCoord, earthCoord)} km
+        </div>
+        <p>Satelite to Moon: {calculateDistance(dscovrCoord, moonCoord)} km</p>
+        <p>Satelite to Sun: {calculateDistance(dscovrCoord, sunCoord)} km</p>
+        <p>Sun to earth: {calculateDistance(earthCoord, sunCoord)} km</p>
       </div>
-      <div>{availableDatesArray.length} available days</div>
-      <div>Select a new date</div>
-      <DateSelector
-        availableDatesArray={availableDatesArray}
-        handleDateChange={handleDateChange}
-      />
-      <ImageCycle />
-      <div>
-        Satelite to Earth: {calculateDistance(dscovrCoord, earthCoord)} km
-      </div>
-      <div>
-        Satelite to Moon: {calculateDistance(dscovrCoord, moonCoord)} km
-      </div>
-      <div>Satelite to Sun: {calculateDistance(dscovrCoord, sunCoord)} km</div>
-      <div>Sun to earth: {calculateDistance(earthCoord, sunCoord)} km</div>
     </div>
   );
 }

@@ -1,16 +1,30 @@
 body {
-  background-color: whitesmoke;
+  background-color: black;
   /* color: #c08b1d; */
-  color: #f2b54a;
+  /* color: #f2b54a; */
+  color: #d29119;
+  /* font-family: "Goldman", cursive; */
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
 }
 .mainImage {
-  max-width: 70%;
+  max-width: 80%;
   max-height: auto;
 }
 
 .header {
-  /* font-family: "IBM Plex Sans", sans-serif; */
-  font-family: "Goldman", cursive;
+  /* margin-left: 5vw; */
+  /* margin: auto; */
+  /* font-weight: 700; */
+  /* margin-bottom: 2rem; */
+}
+.content {
+  /* margin-left: 5vw; */
+  /* margin: auto; */
+  /* font-weight: 700; */
+}
+.nav-container {
+  margin: auto;
 }
 
 .container {
@@ -39,10 +53,29 @@ body {
   border-radius: 10px;
   border-width: 4px;
   border-color: honeydew;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 5vw; */
+  margin-left: 10vw;
+  min-width: 270px;
 
   /* border: #e79e4f; */
 }
 
+.custom-select {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background: #d29119;
+}
+
+.information {
+  display: flex;
+  margin: 10rem;
+}
+.info-section {
+  max-width: 700px;
+  margin: auto;
+}
 /* iPads (portrait and landscape) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .mainImage {

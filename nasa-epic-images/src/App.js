@@ -1,5 +1,6 @@
 import ImageContainer from "./ImageContainer";
 import Navigation from "./Navigation";
+import Info from "./Info";
 import { useState, useEffect } from "react";
 
 const partialImageUrl = "https://epic.gsfc.nasa.gov/archive/natural/";
@@ -83,13 +84,18 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Navigation
-        handleDateChange={handleDateChange}
-        availableDatesArray={availableDates}
-        dateData={dateData}
-      />
-      <ImageContainer imageUrl={imageUrl} />
+    <div>
+      <div className="container">
+        <Navigation
+          handleDateChange={handleDateChange}
+          availableDatesArray={availableDates}
+          dateData={dateData}
+        />
+        <ImageContainer imageUrl={imageUrl} />
+      </div>
+      <div className="information">
+        <Info />
+      </div>
     </div>
   );
 }

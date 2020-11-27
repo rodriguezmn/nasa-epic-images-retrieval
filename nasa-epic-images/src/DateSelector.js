@@ -1,5 +1,7 @@
 import React from "react";
 
+import Select from "@material-ui/core/Select";
+
 function DateSelector({ availableDatesArray, handleDateChange }) {
   const handleOnchange = (e) => {
     // Argument is a date in string format
@@ -7,8 +9,7 @@ function DateSelector({ availableDatesArray, handleDateChange }) {
   };
   return (
     <div>
-      {/* <InputLabel htmlFor="select"></InputLabel> */}
-      <select name="" id="" onChange={handleOnchange}>
+      <Select name="" id="" onChange={handleOnchange} className="custom-select">
         {availableDatesArray.map((date) => {
           return (
             <option key={availableDatesArray.indexOf(date)} value={date}>
@@ -16,7 +17,7 @@ function DateSelector({ availableDatesArray, handleDateChange }) {
             </option>
           );
         })}
-      </select>
+      </Select>
     </div>
   );
 }
