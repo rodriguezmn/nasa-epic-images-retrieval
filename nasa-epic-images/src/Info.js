@@ -17,6 +17,7 @@ function Info() {
         <img
           src="https://www.nesdis.noaa.gov/sites/default/files/assets/images/point_of_lagrange1_big.jpg"
           alt="DSCOVR position in space. Credit: NOAA"
+          title="DSCOVR position in space. Credit: NOAA"
           style={{ width: "80%", height: "auto" }}
         />
         <h5>
