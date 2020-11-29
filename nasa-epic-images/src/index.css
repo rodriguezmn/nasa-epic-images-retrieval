@@ -26,9 +26,9 @@ body {
   justify-content: space-between;
 }
 .navigation {
-  min-width: 200px;
-  /* padding-top: 150px; */
+  min-width: 300px;
   margin-top: auto;
+  margin-bottom: auto;
 }
 .quote-author {
   /* text-align: center; */
