@@ -44,9 +44,9 @@ function Info() {
             className="link"
             href="https://en.wikipedia.org/wiki/Deep_Space_Climate_Observatory"
           >
-            DSCOVR satellite
+            DSCOVR satellite{" "}
           </a>
-          , was launched by SpaceX on a Falcon 9 launch vehicle on February 11,
+          was launched by SpaceX on a Falcon 9 launch vehicle on February 11,
           2015, from Cape Canaveral. It maintains the real-time solar wind
           monitoring capabilities, which are critical to the accuracy and lead
           time of space weather alerts and forecasts. Without timely and
