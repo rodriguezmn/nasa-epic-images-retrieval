@@ -88,7 +88,7 @@ function App() {
       <>
         <div className="container">
           <h1 className="heading">
-            Look again at that dot. <br /> That's here. <br />
+            Consider again that dot. <br /> That's here. <br />
             That's home. <br />
             That's us.
           </h1>
