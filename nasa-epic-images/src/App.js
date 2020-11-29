@@ -35,6 +35,7 @@ function App() {
       console.log("date data", dateData);
       const url = makeImageUrl(dateData);
       setImageUrl(url);
+      setLoading(false);
     }
   }, [dateData]);
 
@@ -64,7 +65,6 @@ function App() {
   const fetchDateData = async (url) => {
     const response = await fetch(url);
     const data = await response.json();
-    setLoading(false);
     setDateData(data);
   };
 
