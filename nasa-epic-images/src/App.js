@@ -83,22 +83,45 @@ function App() {
   if (loading) {
     return <h1>Loading</h1>;
   }
-
+  if (window.innerWidth <= 1024) {
+    return (
+      <>
+        <div className="container">
+          <h1 className="heading">
+            Look again at that dot. <br /> That's here. <br />
+            That's home. <br />
+            That's us.
+          </h1>
+          <h5 className="quote-author">- Carl Sagan</h5>
+          <div className="upper-section">
+            <ImageContainer imageUrl={imageUrl} />
+            <Navigation
+              handleDateChange={handleDateChange}
+              availableDatesArray={availableDates}
+              dateData={dateData}
+            />
+          </div>
+          <Info />
+        </div>
+        <Footer />
+      </>
+    );
+  }
   return (
-    <div className="page-wrapper">
+    <>
       <div className="container">
-        <Navigation
-          handleDateChange={handleDateChange}
-          availableDatesArray={availableDates}
-          dateData={dateData}
-        />
-        <ImageContainer imageUrl={imageUrl} />
-      </div>
-      <div className="information">
+        <div className="upper-section">
+          <Navigation
+            handleDateChange={handleDateChange}
+            availableDatesArray={availableDates}
+            dateData={dateData}
+          />
+          <ImageContainer imageUrl={imageUrl} />
+        </div>
         <Info />
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -5,91 +5,142 @@ body {
   font-weight: 700;
 }
 
-.nav-container {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 7rem;
-}
-
+/* Container behaves the same way for large and small screens */
 .container {
-  display: flex;
   max-width: 1280px;
+  /* Center container in root element */
   margin: auto;
-}
-
-.imageContainer {
-  display: flex;
-}
-
-.mainImage {
-  max-width: 80%;
-  max-height: auto;
-  margin: auto;
-}
-
-.navigation {
   display: flex;
   flex-direction: column;
-  min-width: 270px;
+}
+
+.upper-section {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation {
+  min-width: 200px;
+  /* padding-top: 150px; */
+  margin-top: auto;
 }
 .quote-author {
-  margin-bottom: 5rem;
+  /* text-align: center; */
+  margin-top: 5px;
 }
-.custom-select {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  background: #d29119;
+.select > div {
+  color: gray;
 }
-
-.information {
-  display: flex;
-  max-width: 1280px;
-  margin: auto;
+.data > h4 {
+  color: gray;
 }
-.info-section {
-  max-width: 700px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.select-element {
+  margin-top: 10px;
+  background: gray;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+}
+.data {
+  text-align: left;
 }
 
-.page-wrapper {
-  margin: auto;
+.image-container {
+  display: flex;
+}
+.image {
+  max-width: 80%;
+  /* Image changes size based on viewport size, but upper margin doesn't change */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.info-section-content {
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 120px;
+}
+.info-section-content h2 {
+  text-align: center;
+  color: gray;
+}
+
+.info-section-content img {
+  width: 70%;
+  height: auto;
+}
+
+.link {
+  color: gray;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+figcaption {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  color: gray;
 }
 
 .footer {
-  margin-top: 10rem;
+  margin-top: 20px;
 }
-/* iPads (portrait and landscape) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .mainImage {
-    max-width: 80%;
-    max-height: auto;
+/* Page responsiveness for different devices*/
+@media only screen and (min-width: 481px) and (max-width: 1500px) {
+  .navigation {
+    padding-left: 140px;
   }
 }
-/* Cellphones (portrait and landscape) */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .mainImage {
-    max-width: 90%;
-    max-height: auto;
+/* iPads 768-1024 + cellphone 320-480 (portrait and landscape) */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .upper-section {
+    flex-direction: column;
+    justify-content: start;
   }
-  .container {
-    /* display: flex; */
-    /* max-width: 1280px; */
-    /* margin: auto; */
-    flex-direction: column-reverse;
-    /* flex-wrap: wrap; */
-  }
-  .nav-container {
-    margin-top: 0px;
-    margin-right: auto;
+  .heading {
     margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
   }
   .quote-author {
-    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .footer {
-    margin-top: 1rem;
+  .navigation {
+    display: flex;
+    flex-direction: column;
+  }
+  .select {
+    margin: auto;
+    text-align: center;
+  }
+
+  .data {
+    margin: auto;
+  }
+  .data * {
+    text-align: center;
+  }
+  .whitesmoke {
+    color: whitesmoke;
+  }
+  .navigation {
+    padding-left: 0;
+  }
+  .image {
+    width: 80%;
+    height: 80%;
+    /* margin-top: auto; */
+    /* margin-bottom: 0; */
+  }
+
+  .info-section-content {
+    padding: 0 20px;
   }
 }
+
+/* Cellphones (portrait and landscape) */
+/* @media only screen and (min-width: 320px) and (max-width: 480px) {
+} */

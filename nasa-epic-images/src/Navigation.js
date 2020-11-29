@@ -56,18 +56,49 @@ function Navigation({ availableDatesArray, handleDateChange, dateData }) {
     return distanceFormatted;
   };
 
+  // const smallBreakpoint = 320;
+  const largeBreakpoint = 1024;
+  // Change order of Navigation elements for small screens
+  if (window.innerWidth <= largeBreakpoint) {
+    return (
+      <div className="navigation">
+        <div className="select">
+          <div className="whitesmoke" style={{ marginTop: "25px" }}>
+            Select one
+          </div>
+          <div className="whitesmoke">of the {availableDatesArray.length}</div>
+          <div className="whitesmoke">available days</div>
+          <DateSelector
+            availableDatesArray={availableDatesArray}
+            handleDateChange={handleDateChange}
+          />
+        </div>
+        <ImageCycle />
+        <div className="data">
+          <h4 className="whitesmoke">Distances {"<------>"}</h4>
+          <p>
+            Satelite to Earth: {calculateDistance(dscovrCoord, earthCoord)} km
+          </p>
+          <p>
+            Satelite to Moon: {calculateDistance(dscovrCoord, moonCoord)} km
+          </p>
+          <p>Satelite to Sun: {calculateDistance(dscovrCoord, sunCoord)} km</p>
+          <p>Sun to earth: {calculateDistance(earthCoord, sunCoord)} km</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Return for large screens
   return (
     <div className="navigation">
-      <div className="nav-container">
-        <div>
-          <h2 style={{ marginBottom: "0.4rem" }}>
-            Look again at that dot. <br /> That's here. <br />
-            That's home. <br />
-            That's us.
-          </h2>
-
-          <h5 className="quote-author">Carl Sagan</h5>
-        </div>
+      <h2 className="heading">
+        Look again at that dot. <br /> That's here. <br />
+        That's home. <br />
+        That's us.
+      </h2>
+      <h5 className="quote-author">- Carl Sagan</h5>
+      <div className="select">
         <div style={{ marginTop: "25px" }}>Select one</div>
         <div>of the {availableDatesArray.length}</div>
         <div>available days</div>
@@ -75,7 +106,9 @@ function Navigation({ availableDatesArray, handleDateChange, dateData }) {
           availableDatesArray={availableDatesArray}
           handleDateChange={handleDateChange}
         />
-        <ImageCycle />
+      </div>
+      <ImageCycle />
+      <div className="data">
         <h4>Distances {"<------>"}</h4>
         <div>
           Satelite to Earth: {calculateDistance(dscovrCoord, earthCoord)} km
