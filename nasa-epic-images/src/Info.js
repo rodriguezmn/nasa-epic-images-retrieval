@@ -27,12 +27,12 @@ function Info() {
                 style={{ marginRight: "auto", marginLeft: "auto" }}
               />
               <figcaption>
-                DSCOVR position in space. Credit:{" "}
+                DSCOVR position in space.
                 <a
                   className="link"
                   href="https://www.nesdis.noaa.gov/content/dscovr-deep-space-climate-observatory"
                 >
-                  NOAA
+                  Credit: NOAA
                 </a>
               </figcaption>
             </a>
