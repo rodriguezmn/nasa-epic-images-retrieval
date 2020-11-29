@@ -2,6 +2,8 @@ import ImageContainer from "./ImageContainer";
 import Navigation from "./Navigation";
 import Info from "./Info";
 import Footer from "./Footer";
+import Loading from "./Loading";
+
 import { useState, useEffect } from "react";
 
 const partialImageUrl = "https://epic.gsfc.nasa.gov/archive/natural/";
@@ -81,7 +83,7 @@ function App() {
 
   // Conditional return
   if (loading) {
-    return <h1>Loading</h1>;
+    return <Loading />;
   }
   if (window.innerWidth <= 1024) {
     return (

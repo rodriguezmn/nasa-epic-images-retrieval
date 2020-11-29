@@ -4,6 +4,13 @@ body {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
 }
+.loading {
+  display: flex;
+  min-height: 100vh;
+}
+.loading > h1 {
+  margin: auto;
+}
 
 /* Container behaves the same way for large and small screens */
 .container {
