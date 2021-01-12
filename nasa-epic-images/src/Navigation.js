@@ -77,12 +77,12 @@ function Navigation({ availableDatesArray, handleDateChange, dateData }) {
         <div className="data">
           <h4 className="whitesmoke">Distances {"<------>"}</h4>
           <p>
-            Satelite to Earth: {calculateDistance(dscovrCoord, earthCoord)} km
+            Satellite to Earth: {calculateDistance(dscovrCoord, earthCoord)} km
           </p>
           <p>
-            Satelite to Moon: {calculateDistance(dscovrCoord, moonCoord)} km
+            Satellite to Moon: {calculateDistance(dscovrCoord, moonCoord)} km
           </p>
-          <p>Satelite to Sun: {calculateDistance(dscovrCoord, sunCoord)} km</p>
+          <p>Satellite to Sun: {calculateDistance(dscovrCoord, sunCoord)} km</p>
           <p>Sun to earth: {calculateDistance(earthCoord, sunCoord)} km</p>
         </div>
       </div>
@@ -111,10 +111,10 @@ function Navigation({ availableDatesArray, handleDateChange, dateData }) {
       <div className="data">
         <h4>Distances {"<------>"}</h4>
         <div>
-          Satelite to Earth: {calculateDistance(dscovrCoord, earthCoord)} km
+          Satellite to Earth: {calculateDistance(dscovrCoord, earthCoord)} km
         </div>
-        <p>Satelite to Moon: {calculateDistance(dscovrCoord, moonCoord)} km</p>
-        <p>Satelite to Sun: {calculateDistance(dscovrCoord, sunCoord)} km</p>
+        <p>Satellite to Moon: {calculateDistance(dscovrCoord, moonCoord)} km</p>
+        <p>Satellite to Sun: {calculateDistance(dscovrCoord, sunCoord)} km</p>
         <p>Sun to earth: {calculateDistance(earthCoord, sunCoord)} km</p>
       </div>
     </div>
